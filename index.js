@@ -1,6 +1,8 @@
 const lightdarkbutton = document.getElementById("lightdarkbut");
 const body = document.body;
 const ls = localStorage;
+const url = document.URL;
+const isfile = url.includes("file:///");
 
 const theme = ls.getItem("theme");
 
@@ -35,14 +37,52 @@ lightdarkbutton.onclick = () => {
     }
 };
 
+function homebuttonPress() {
+    console.log("games button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("obviousstudios.dev");
+        console.log("Running on webserver");
+    }
+    //window.location.replace();
+}
+
 function gamesbuttonPress() {
     console.log("games button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("obviousstudios.dev/games");
+        console.log("Running on webserver");
+    }
+    //window.location.replace();
 }
 
 function teambuttonPress() {
     console.log("team button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("obviousstudios.dev/team");
+        console.log("Running on webserver");
+    }
 }
 
 function blogbuttonPress () {
     console.log("blog button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("obviousstudios.dev/blog");
+        console.log("Running on webserver");
+    }
 }
