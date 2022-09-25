@@ -62,7 +62,7 @@ function gamesbuttonPress() {
     }
     else
     {
-        window.location.replace("games");
+        window.location.replace("https://www.obviousstudios.dev/games");
         console.log("Running on webserver");
     }
     //window.location.replace();
@@ -75,7 +75,7 @@ function teambuttonPress() {
     }
     else
     {
-        window.location.replace("team");
+        window.location.replace("https://www.obviousstudios.dev/team");
         console.log("Running on webserver");
     }
 }
@@ -87,7 +87,7 @@ function blogbuttonPress () {
     }
     else
     {
-        window.location.replace("blog");
+        window.location.replace("https://www.obviousstudios.dev/blog");
         console.log("Running on webserver");
     }
 }
