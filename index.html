@@ -1,37 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obvious Studios</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="themes.css">
-    <link rel="icon" type="image/png" href="images/LogoGlow.png">
-</head>
-<body class="dark">
-    <div class="lightdarkdiv">
-        <input name="lightdark" type="image" src="images/moon-regular.png" class="darklight" id="lightdarkbut">
-    </div>
-    <header>
-        <div class="logodiv">
-        <img src="images/LogoGlow.png" class="compLogo">
-        </div>
-        <div class="mainbuttons">
-            <button onclick="gamesbuttonPress()" class="menubutton">Games</button>
-            <button onclick="teambuttonPress()" class="menubutton">Our Team</button>
-            <button onclick="blogbuttonPress()" class="menubutton">Blog</button>
-        </div>
-        <div class="aboutus">
-            <details>
-                <summary>about us</summary>
-                <p>Obvious Studios is a game development studio started by ObviousAlexC and ThatOneWierdo92 while making games seems like the point of the studio having fun while making and playing them is more fun to us! Sometimes we also release experiments to show some tech we have been working on.</p>
-            </details>
-        </div>
-        <div>
-            <iframe class="pagebot"></iframe>
-        </div>
-    </header>
-    <script src="index.js"></script>
-</body>
-</html>
+const lightdarkbutton = document.getElementById("lightdarkbut");
+const body = document.body;
+const ls = localStorage;
+const url = document.URL;
+const isfile = url.includes("file:///");
+
+const theme = ls.getItem("theme");
+
+if (theme) {
+    body.classList.replace("dark",theme);
+    if (body.classList.contains("light")) {
+        lightdarkbutton.src="images/sun-solid.png"
+    }
+    else if (body.classList.contains("aqua")){
+        lightdarkbutton.src="images/water-solid.png"
+    }
+    else{
+        lightdarkbutton.src="images/moon-regular.png"
+    }
+}
+
+lightdarkbutton.onclick = () => {
+    if (body.classList.contains("dark")) {
+        body.classList.replace("dark","light")
+        ls.setItem("theme","light");
+        lightdarkbutton.src="images/sun-solid.png"
+    }
+    else if (body.classList.contains("light")){
+        body.classList.replace("light","aqua")
+        ls.setItem("theme","aqua");
+        lightdarkbutton.src="images/water-solid.png"
+    }
+    else{
+        body.classList.replace("aqua","dark") 
+        ls.setItem("theme","dark");
+        lightdarkbutton.src="images/moon-regular.png"
+    }
+};
+
+function homebuttonPress() {
+    console.log("games button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("obviousstudios.dev");
+        console.log("Running on webserver");
+    }
+    //window.location.replace();
+}
+
+function gamesbuttonPress() {
+    console.log("games button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("games");
+        console.log("Running on webserver");
+    }
+    //window.location.replace();
+}
+
+function teambuttonPress() {
+    console.log("team button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("team");
+        console.log("Running on webserver");
+    }
+}
+
+function blogbuttonPress () {
+    console.log("blog button pressed");
+    if (isfile){
+        console.log("this is a file");
+    }
+    else
+    {
+        window.location.replace("blog");
+        console.log("Running on webserver");
+    }
+}
