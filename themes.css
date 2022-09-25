@@ -1,0 +1,20 @@
+.light {
+    --bg: #eeeeee;
+    --text: #333333;
+    --logo: -100%;
+    --bottompage: #dddddd;
+}
+
+.dark {
+    --bg: #111111;
+    --text: #eeeeee;
+    --logo: 100%;
+    --bottompage: #000000;
+}
+
+.aqua {
+    --bg: #000211;
+    --text: #0099ff;
+    --logo: 100%;
+    --bottompage: #000102;
+}
