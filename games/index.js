@@ -21,7 +21,7 @@ if (theme) {
 }
 
 backbut.onclick = () => {
-    homebuttonPress
+    homebuttonPress();
 };
 
 lightdarkbutton.onclick = () => {
@@ -49,7 +49,7 @@ function homebuttonPress() {
     }
     else
     {
-        window.location.replace("obviousstudios.dev");
+        window.location.replace("https://www.obviousstudios.dev");
         console.log("Running on webserver");
     }
     //window.location.replace();
@@ -62,7 +62,7 @@ function gamesbuttonPress() {
     }
     else
     {
-        window.location.replace("obviousstudios.dev/games");
+        window.location.replace("games");
         console.log("Running on webserver");
     }
     //window.location.replace();
@@ -75,7 +75,7 @@ function teambuttonPress() {
     }
     else
     {
-        window.location.replace("obviousstudios.dev/team");
+        window.location.replace("team");
         console.log("Running on webserver");
     }
 }
@@ -87,7 +87,7 @@ function blogbuttonPress () {
     }
     else
     {
-        window.location.replace("obviousstudios.dev/blog");
+        window.location.replace("blog");
         console.log("Running on webserver");
     }
 }
