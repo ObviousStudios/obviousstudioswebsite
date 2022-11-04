@@ -124,7 +124,7 @@ class blog {
 
     addtodoc(){
         let otherthing = document.getElementById("holdingdiv")
-        let thingbutton = document.createElement("button")
+        let thingbutton = document.createElement("div")
         thingbutton.innerHTML = this.name + "<br>" + this.date
         thingbutton.style = "border: transparent;min-width: 10%;min-height: 10%;color: var(--text);background: var(--bottompage);justify-content: center;padding: 20px;margin: 20px;"
         thingbutton.onclick = () => {
