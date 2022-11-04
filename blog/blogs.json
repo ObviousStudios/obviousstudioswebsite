@@ -1,0 +1,14 @@
+{
+    "blogs":[
+        {
+            "id":1,
+            "title":"The start",
+            "date":"25/09/2022"
+        },
+        {
+            "id":2,
+            "title":"CMS+ update 1",
+            "date":"3/11/2022"
+        }
+    ]
+}
