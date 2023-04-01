@@ -1,0 +1,23 @@
+.light {
+    --bg: #ff00aa;
+    --text: #ffe600;
+    --logo: -100%;
+    --bottompage: #003cff;
+    --links: #000000;
+}
+
+.dark {
+    --bg: #ffffff;
+    --text: #7c0505;
+    --logo: 100%;
+    --bottompage: #e77575;
+    --links: #5b626b;
+}
+
+.aqua {
+    --bg: #001eff;
+    --text: #0099ff;
+    --logo: 100%;
+    --bottompage: #0080ff;
+    --links: #0099ff;
+}
